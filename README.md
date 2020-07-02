@@ -24,9 +24,13 @@ Run script [create_kpi_tables](db/create_kpi_tables.sql) in your DB to create ne
 
 ### Configuration
 
+#### PPC
 All application settings should be stored in settings.py file.
 As settings.py can contain sensitive information (as password), the file is exluded from git.
 Please copy `settings.py.example` to `settings.py` file and change necessary variables in `ppc` and `tests` folder.
+
+#### Webapp
+For *webapp* application, the sensitive information should be stored in `webapp/webapp/secret.py` file. Please use `webapp/webapp/secret.py.example` as template.
 
 
 ## Tests
