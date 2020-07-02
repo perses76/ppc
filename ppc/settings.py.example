@@ -1,4 +1,4 @@
-INPUT_FOLDER = "/var/commsquare/logs"
+INPUT_FOLDER = "/var/ppc/logs"
 DB_CONFIG = {
     "host": "localhost",
     "database": "ppc",

@@ -10,7 +10,7 @@ with open('LICENSE') as f:
 setup(
     name='ppc',
     version='0.1.0',
-    description='Commsquare Python Programming Challenge',
+    description='Python Programming Challenge',
     long_description=readme,
     author='Vadim Ovcearenco',
     author_email='wadim@veles-soft.com',
