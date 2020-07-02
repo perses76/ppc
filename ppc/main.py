@@ -4,6 +4,7 @@ import mysql.connector  # type: ignore
 from . import raw_log
 from . import kpi1
 from . import kpi2
+from . import settings
 
 
 def run(folder, db_config):
@@ -25,14 +26,7 @@ def run(folder, db_config):
 
 def main():
     """Read app config from environemnt variables and run app."""
-    folder = os.environ["folder"]
-    db_config = {
-        "host": os.environ["host"],
-        "database": os.environ["database"],
-        "user": os.environ["user"],
-        "password": os.environ["password"],
-    }
-    run(folder, db_config)
+    run(settings.INPUT_FOLDER, settings.DB_CONFIG)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,7 @@
+INPUT_FOLDER = "/var/commsquare/logs"
+DB_CONFIG = {
+    "host": "localhost",
+    "database": "ppc",
+    "user": "ppc",
+    "password": "XXXX",
+    }
