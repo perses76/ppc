@@ -18,10 +18,16 @@ pip install -e .[dev]
 
 All application settings should be stored in settings.py file.
 As settings.py can contain sensitive information (as password), the file is exluded from git.
-Please copy `settings.py.exampl` to `settings.py` file and change necessary variables in `ppc` and `tests` folder.
+Please copy `settings.py.example` to `settings.py` file and change necessary variables in `ppc` and `tests` folder.
 
 
 ## Tests
+
+```
+pytest
+```
+
+Attention: setup settings.py in `tests` folder.
 
 ### Fix pytest bug
 
@@ -29,11 +35,6 @@ Pytest has bug with mysql: https://github.com/pytest-dev/pytest/issues/5623
 
 To fix it, please delete `site-packages/mysql-vendor` folder.
 
-```
-pytest
-```
-
-Attention: setup settings.py in `tests` folder.
 
 
 ## Run
