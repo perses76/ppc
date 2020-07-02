@@ -17,7 +17,7 @@ setup(
     license=license,
     packages=find_packages(exclude=('tests', 'docs')),
     python_requires='>=3.6',
-    install_requires=['pandas', 'mysql-connector-python', 'attr'],
+    install_requires=['pandas', 'mysql-connector-python', 'attr', 'django', 'mysqlclient'],
     extras_require={
         'dev': ['pytest']
     }

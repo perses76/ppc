@@ -1,0 +1,120 @@
+openapi: 3.0.0
+info:
+  title: PPC webapp API
+  description: Endpoints to kpi1 and kpi2 report data.
+  version: 0.1.0
+paths:
+  /kpi1:
+    get:
+      summary: Returns kpi1 report data
+      description: Return kpi1 data
+      parameters:
+        - name: start_from
+          in: query
+          required: false
+          schema:
+            type: number
+            description: Show all records where interval_start_timestamp bigger or equal to start_from.
+            example: 1488355200000
+        - name: end_to
+          in: query
+          required: false
+          schema:
+            type: number
+            description: Show all records where interval_end_timestamp less than end_to.
+            example: 1488355500000
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: number
+            description: "How many records to present. Default: 10000"
+            example: 34              
+      responses:
+        '200':    # status code
+          description: KPI1 entities
+          content:
+            application/json:
+              schema: 
+                type: array
+                items: 
+                  type: object
+                  properties:
+                    interval_start_timestamp:
+                      type: number
+                      description: "Start time of the interval (Unix timestamp in milliseconds)"
+                      example: 1488355200000
+                    interval_end_timestamp:
+                      type: number
+                      description: "End time of the interval (Unix timestamp in milliseconds)"
+                      example: 1488355500000
+                    service_id:
+                      type: number
+                      description: "Identifier of traffic class (32bit integer). Traffic class can be facebook, youtube, instagram etc."
+                      example: 1
+                    total_bytes:
+                      type: number
+                      description: "Total number of bytes for the service"
+                      example: 16100
+                    interval:
+                      type: string
+                      description: "5-minute or 1-hour"
+                      example: "5min"
+                      enum: ["5min", "1H"]
+  /kpi2:
+    get:
+      summary: Returns kpi2 report data
+      description: Return kpi2 data
+      parameters:
+        - name: start_from
+          in: query
+          required: false
+          schema:
+            type: number
+            description: Show all records where interval_start_timestamp bigger or equal to start_from.
+            example: 1488355200000
+        - name: end_to
+          in: query
+          required: false
+          schema:
+            type: number
+            description: Show all records where interval_end_timestamp less than end_to.
+            example: 1488355500000
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: number
+            description: "How many records to present. Default: 10000"
+            example: 34              
+      responses:
+        '200':    # status code
+          description: KPI2 entities
+          content:
+            application/json:
+              schema: 
+                type: array
+                items: 
+                  type: object
+                  properties:
+                    interval_start_timestamp:
+                      type: number
+                      description: "Start time of the interval (Unix timestamp in milliseconds)"
+                      example: 1488355200000
+                    interval_end_timestamp:
+                      type: number
+                      description: "End time of the interval (Unix timestamp in milliseconds)"
+                      example: 1488355500000
+                    cell_id:
+                      type: number
+                      description: "Cell ID of mobile user"
+                      example: 1
+                    number_of_unique_users:
+                      type: number
+                      description: "Number of unique users for the cell "
+                      example: 3
+                    interval:
+                      type: string
+                      description: "5-minute or 1-hour"
+                      example: "5min"
+                      enum: ["5min", "1H"]
