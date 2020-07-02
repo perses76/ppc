@@ -47,7 +47,7 @@ Attention: setup settings.py in `ppc` folder.
 
 ## Class diagram
 
-[Class diagram](docs/class_diagram.svg)
+![Class diagram](docs/ClassDiagram.png)
 
 
 ## Modules
