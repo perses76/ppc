@@ -1,7 +1,39 @@
-# Commsquare Python Programming Challenge
+# Python Programming Challenge
 
 
-The main focus is on clear code that is easy to extend.
+## Install
+
+```
+python setup.py install
+```
+
+## Configuration
+
+All application settings should be stored in settings.py file.
+As settings.py can contain sensitive information (as password), the file is exluded from git.
+Please copy `settings.py.exampl` to `settings.py` file and change necessary variables
+
+
+## Tests
+
+```
+pytest
+```
+
+Attention: setup settings.py in `tests` folder.
+
+## Run
+
+```
+python -m ppc.main
+```
+
+Attention: setup settings.py in `ppc` folder.
+
+
+## Class diagram
+
+[Class diagram](docs/class_diagram.svg)
 
 
 ## Modules
